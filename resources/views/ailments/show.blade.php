@@ -45,9 +45,10 @@
                 </div>
                 <div class="card-body">
                     <div class="container">
-                        @foreach ($ailment->products as $product)                           
-                        <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
-                            <div class="card col" style="width: 18rem;">
+                        <div class="row g-3">
+                        @foreach ($ailment->products as $product)
+                        <div class="col-4">
+                            <div class="card" style="width: 18rem;">
                                 <div class="card-body">
                                   <h4 class="">{{$product->name_product}}</h4>
                                   <h6 class="card-subtitle mb-2 text-muted">
@@ -55,7 +56,7 @@
                                     @case('Extractos')
                                     <i class="fas fa-prescription-bottle"></i>
                                         @break
-                                    @case('Planta en Frasco')
+                                    @case('Plantas en frasco')
                                     <i class="fas fa-seedling"></i>   
                                         @break
                                     @case('Tabletas')
@@ -67,22 +68,41 @@
                                     @case('Jarabes')
                                     <i class="fas fa-prescription-bottle"></i>
                                         @break
-                                    @case('Tónicos')
+                                    @case('Tónico')
                                     <i class="fas fa-tint"></i>
+                                        @break
+                                    @case('Shampoos')
+                                    <i class="fas fa-air-freshener"></i>
+                                        @break
+                                    @case('Jabones')
+                                    <i class="fas fa-soap"></i>
                                         @break
                                     @case('Té')
                                     <i class="fas fa-mug-hot"></i>
                                         @break
-                                    @default                                        
-                                @endswitch
+                                    @case('Cremas Líquidas')
+                                    <i class="fas fa-hand-holding-water"></i>
+                                        @break
+                                    @case('Geles Corporales')
+                                    <i class="fas fa-child"></i>
+                                        @break
+                                    @case('Cremas')
+                                    <i class="fas fa-pump-soap"></i>
+                                        @break
+                                    @case('Aceites Esenciales' || 'Aceites')
+                                    <i class="fas fa-wine-bottle"></i>
+                                        @break
+                                    @default                                       
+                                    @endswitch
                                       {{$product->presentation_product}}
                                     </h6>
                                   <p class="card-text">{{$product->content_product}}</p>
                                   <a href="{{route('products.show', $product->id)}}" class="card-link">Ver Medicamento</a>
                                 </div>
-                            </div>                            
+                            </div> 
                         </div>
                         @endforeach
+                        </div>
                     </div>
                     
                       
