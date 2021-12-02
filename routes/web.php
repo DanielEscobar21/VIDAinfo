@@ -26,7 +26,7 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->resource('/home', HomeController::class)->names('home');
+Route::middleware(['auth:sanctum', 'verified'])->resource('/dashboard', HomeController::class)->names('home');
 
 Auth::routes();
 
