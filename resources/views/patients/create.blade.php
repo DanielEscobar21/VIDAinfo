@@ -39,7 +39,7 @@
                         @enderror
                     </div>
                     <div class="col col-lg-2">
-                        <label for="gender_patient" class="form-label">Genero *</label>
+                        <label for="gender_patient" class="form-label">Género *</label>
                         <select name="gender_patient" class="form-control" id="gender_patient">
                         <option value="M">Masculino</option>
                         <option value="F">Femenino</option>

@@ -3,7 +3,7 @@
 @section('title', $patient->name_patient . ' ' .$patient->lastname_patient . ' - ')
 
 @section('content_header')
-    <a class="btn btn-light" href="{{route('patients.index')}}"><i class="fas fa-chevron-left"></i> Regresar al paciente</a>
+    <a class="btn btn-light" href="{{route('patients.index')}}"><i class="fas fa-chevron-left"></i> Regresar al todos los pacientes</a>
 @stop
 
 @section('content')

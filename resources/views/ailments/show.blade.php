@@ -18,7 +18,7 @@
                     <div class="row">
                         <h4 class="col">Información del Padecimiento</h4>
                         <div class="col-md-auto">
-                            <a class="btn btn-light" href="{{route('ailments.edit', $ailment)}}"><i class="fas fa-user-edit"></i> Modificar Información</a>
+                            <a class="btn btn-light" href="{{route('ailments.edit', $ailment)}}"><i class="fas fa-edit"></i> Modificar Información</a>
                         </div>
                     </div>                    
                 </div>
@@ -27,12 +27,6 @@
                         <div class="col">
                             <label class="form-label">Nombre del Padecimiento: </label>
                             <h5>{{$ailment->name_ailment . ' ' .$ailment->lastname_ailment}}</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label class="form-label">Más Información: </label>
-                            <h5>Pendiente...</h5>
                         </div>
                     </div>
                 </div>

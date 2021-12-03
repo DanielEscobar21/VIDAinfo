@@ -102,7 +102,7 @@
                 <span class="text-muted">* Campos Obligatorios</span>
                 <br><br> 
                 <div class="d-grid gap-2">
-                    <button class="btn btn-lg btn-light btn-block" type="submit"><i class="fas fa-user-plus"></i> Agregar</button>
+                    <button class="btn btn-lg btn-light btn-block" type="submit"><i class="fas fa-plus"></i> Agregar</button>
                 </div>
             </form>
         </div>
