@@ -40,8 +40,3 @@ Route::resource('patients/{patient}/visits', VisitController::class)->names('pat
 
 Route::resource('patients/{patient}/visits/{visit}/treatments', TreatmentController::class)->names('patients.visits.treatments');
 Route::get('patients/{patient}/visits/{visit}/treatments/{treatment}/print', [TreatmentController::class,'print'])->name('patients.visits.treatments.print');
-
-//Route::resource('documents/letterhead', LetterheadController::class)->names('documents.letterhead');
-//Route::post('documents/letterhead/print', [LetterheadController::class,'print'])->name('documents.letterhead.print');
-
-//Route::resourse('setings', VersionController::class)->names('version');

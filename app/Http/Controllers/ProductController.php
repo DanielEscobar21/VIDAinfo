@@ -25,6 +25,8 @@ class ProductController extends Controller
         $product->presentation_product = $request->presentation_product;
         $product->content_product = $request->content_product;
         $product->dose_product = $request->dose_product;
+        $product->department = $request->department;
+        $product->compania=$request->compania;
         $product->save();
         $product->ailments()->attach($request->ailments);
         return redirect()->route('products.show', $product);
@@ -46,6 +48,8 @@ class ProductController extends Controller
         $product->presentation_product = $request->presentation_product;
         $product->content_product = $request->content_product;
         $product->dose_product = $request->dose_product;
+        $product->department = $request->department;
+        $product->compania=$request->compania;
         $product->save();
         return redirect()->route('products.show', $product);
     }

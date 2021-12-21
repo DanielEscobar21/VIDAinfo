@@ -28,9 +28,39 @@
                         @enderror
                     </div>
                     <div class="col">
+                        <label for="compania" class="form-label">Laboratorio *</label>
+                        <input class="form-control col" id="compania" name="compania" value="{{old('compania')}}">
+                        @error('compania')
+                        <br>
+                        <div class="alert alert-danger" role="alert">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            El campo Nombre del Producto no puede estar vacío.
+                        </div>
+                        @enderror
+                    </div>
+                    
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <label for="department" class="form-label">Departamento *</label>
+                        <select class="form-control col" id="department" name="department">
+                        <option selected disabled>Seleccione el Departamento correspondiente</option>
+                        <option value="Fitoterapia">Fitoterapia</option>
+                        <option value="Homeopatía">Homeopatía</option>
+                        <option value="Otro">Otro</option>
+                        </select>
+                        @error('department')
+                        <br>
+                        <div class="alert alert-danger" role="alert">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            El campo Nombre del Producto no puede estar vacío.
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="col">
                         <label for="presentation_product" class="form-label">Tipo de Producto *</label><br>                
                         <select class="form-control" aria-label="Default select example" id="presentation_product" name="presentation_product">
-                            <option selected></option>
+                            <option selected disabled>Seleccione el Tipo de Producto correspondiente</option>
                             <option value="Extractos">Extractos</option>
                             <option value="Plantas en frasco">Plantas en frasco</option>
                             <option value="Tabletas">Tabletas</option>

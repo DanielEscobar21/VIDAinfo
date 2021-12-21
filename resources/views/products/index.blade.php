@@ -24,8 +24,9 @@
         <table id="table_id2" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Nombre</th>
+                    <th>Laboratorio</th>
+                    <th>Departamento</th>
                     <th>Tipo de Producto</th>
                     <th>Contenido</th>
                     <th></th>
@@ -34,8 +35,9 @@
             <tbody>
                 @foreach ($products as $product)
                 <tr>
-                    <td>{{$product->id}}</td>
                     <td>{{$product->name_product}}</td>
+                    <td>{{$product->compania}}</td>
+                    <td>{{$product->department}}</td>
                     <td>@switch($product->presentation_product)
                         @case('Extractos')
                         <i class="fas fa-prescription-bottle"></i>

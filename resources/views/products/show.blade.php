@@ -29,6 +29,14 @@
                             <h5>{{$product->name_product}}</h5>
                         </div>
                         <div class="col">
+                            <label class="form-label">Laboratorio: </label>
+                            <h5>{{$product->compania}}</h5>
+                        </div>
+                        <div class="col">
+                            <label class="form-label">Departamento: </label>
+                            <h5>{{$product->department}}</h5>
+                        </div>
+                        <div class="col">
                             <label class="form-label">Tipo de Producto: </label>
                             <h5>
                                 @switch($product->presentation_product)
@@ -76,12 +84,13 @@
                                 {{' '.$product->presentation_product}} 
                             </h5>
                         </div>
+                        
+                    </div><br>
+                    <div class="row">
                         <div class="col">
                             <label class="form-label">Contenido del Producto: </label>
                             <h5>{{$product->content_product}}</h5>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col">
                             <label class="form-label">Dosis Recomendada: </label>
                             <h5>{{$product->dose_product}}</h5>
