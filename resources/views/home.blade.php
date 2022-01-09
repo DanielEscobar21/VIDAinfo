@@ -11,7 +11,7 @@
 <div class="container">
 <div class="card">
     <div class="card-header">
-        <h1>Bienvenido a VIDAinfo v1.0</h1>
+        <h1>Bienvenido a VIDAinfo v2.0</h1>
     </div>
     <div class="card-body">
         <div class="container">
@@ -28,6 +28,7 @@
                                 
                                     <div class="card col" style="width: 18rem;">
                                         <div class="card-body">
+                                         <h6 class="card-subtitle mb-2 text-muted">{{$product->department}}</h6>
                                           <h4 class="">{{$product->name_product}}</h4>
                                           <h6 class="card-subtitle mb-2 text-muted">
                                             @switch($product->presentation_product)

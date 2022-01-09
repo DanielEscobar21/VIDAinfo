@@ -83,7 +83,7 @@
                         {{$product->presentation_product}}
                     </td>
                     <td>{{$product->content_product}}</td>
-                    <td><a href="{{route('products.show', $product->id)}}">Ver</a> </td>
+                    <td><a class="btn btn-light btn-sm btn-block" href="{{route('products.show', $product->id)}}">Ver</a> </td>
                 </tr>
                 @endforeach
             </tbody>

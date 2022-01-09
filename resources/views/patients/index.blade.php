@@ -24,7 +24,6 @@
         <table id="table_id" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Nombre</th>
                     <th>Apellidos</th>
                     <th>Telefono</th>
@@ -35,7 +34,6 @@
             <tbody>
                 @foreach ($patients as $patient)
                 <tr>
-                    <td>{{$patient->id}}</td>
                     <td>{{$patient->name_patient}}</td>
                     <td>{{$patient->lastname_patient}}</td>
                     <td>{{$patient->phone_patient}}</td>
@@ -46,7 +44,7 @@
                         echo $age->format('%y años');                         
                         
                         ?></td>
-                    <td><a class="btn btn-light" href="{{route('patients.show', $patient->id)}}">Ver</a> </td>
+                    <td><a class="btn btn-light btn-sm btn-block" href="{{route('patients.show', $patient->id)}}">Ver</a> </td>
                 </tr>
                 @endforeach
             </tbody>

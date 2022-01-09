@@ -24,7 +24,6 @@
         <table id="table_id2" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Nombre</th>
                     <th></th>
                 </tr>
@@ -32,9 +31,8 @@
             <tbody>
                 @foreach ($ailments as $ailment)
                 <tr>
-                    <td>{{$ailment->id}}</td>
                     <td>{{$ailment->name_ailment}}</td>                    
-                    <td><a href="{{route('ailments.show', $ailment->id)}}">Ver</a> </td>
+                    <td><a class ="btn btn-light btn-sm btn-block" href="{{route('ailments.show', $ailment->id)}}">Ver</a> </td>
                 </tr>
                 @endforeach
             </tbody>
