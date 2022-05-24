@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Productos - ')
+@section('title', 'Medicamentos - ')
 
 @section('content_header')
     <br>
@@ -12,10 +12,10 @@
         <div class="container">
             <div class="row">
               <div class="col">
-                <h1>Productos</h1>
+                <h1>Medicamentos</h1>
               </div>
               <div class="col-md-auto">
-                <a class="btn btn-lg btn-light" href="{{route('products.create')}}"><i class="fas fa-plus"></i> Agregar Nuevo Producto</a>
+                <a class="btn btn-lg btn-light" href="{{route('products.create')}}"><i class="fas fa-plus"></i> Agregar Nuevo Medicamento</a>
               </div>
             </div>
           </div>
@@ -25,8 +25,6 @@
             <thead>
                 <tr>
                     <th>Nombre</th>
-                    <th>Laboratorio</th>
-                    <th>Departamento</th>
                     <th>Tipo de Producto</th>
                     <th>Contenido</th>
                     <th></th>
@@ -36,14 +34,12 @@
                 @foreach ($products as $product)
                 <tr>
                     <td>{{$product->name_product}}</td>
-                    <td>{{$product->compania}}</td>
-                    <td>{{$product->department}}</td>
                     <td>@switch($product->presentation_product)
                         @case('Extractos')
                         <i class="fas fa-prescription-bottle"></i>
                             @break
                         @case('Plantas en frasco')
-                        <i class="fas fa-seedling"></i>   
+                        <i class="fas fa-seedling"></i>
                             @break
                         @case('Tabletas')
                         <i class="fas fa-tablets"></i>
@@ -78,8 +74,8 @@
                         @case('Aceites Esenciales' || 'Aceites')
                         <i class="fas fa-wine-bottle"></i>
                             @break
-                        @default                                        
-                    @endswitch                        
+                        @default
+                    @endswitch
                         {{$product->presentation_product}}
                     </td>
                     <td>{{$product->content_product}}</td>

@@ -10,7 +10,7 @@ use App\Models\Ailment;
 class ProductController extends Controller
 {
     public function index(){
-        $products = Product::all(); 
+        $products = Product::all();
         return view('products.index', compact('products'));
     }
 
@@ -25,20 +25,18 @@ class ProductController extends Controller
         $product->presentation_product = $request->presentation_product;
         $product->content_product = $request->content_product;
         $product->dose_product = $request->dose_product;
-        $product->department = $request->department;
-        $product->compania=$request->compania;
         $product->save();
         $product->ailments()->attach($request->ailments);
         return redirect()->route('products.show', $product);
     }
 
-    public function show(Product $product){    
+    public function show(Product $product){
         $ailments = Ailment::all();
         return view('products.show', compact('product', 'ailments'));
     }
 
     public function edit(Product $product){
-        
+
         $ailments = Ailment::all()->sortBy('name_ailment');
         return view('products.edit', compact('product', 'ailments'));
     }
@@ -48,8 +46,6 @@ class ProductController extends Controller
         $product->presentation_product = $request->presentation_product;
         $product->content_product = $request->content_product;
         $product->dose_product = $request->dose_product;
-        $product->department = $request->department;
-        $product->compania=$request->compania;
         $product->save();
         return redirect()->route('products.show', $product);
     }

@@ -16,7 +16,7 @@ return [
 
     'title' => '',
     'title_prefix' => '',
-    'title_postfix' => 'VIDAinfo',
+    'title_postfix' => 'MedicaInfo',
 
     /*
     |--------------------------------------------------------------------------
@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>VIDA</b>info',
-    'logo_img' => 'vendor/adminlte/dist/img/LOGO.JPG',
+    'logo' => '<b>Medica</b>Info',
+    'logo_img' => 'vendor/adminlte/dist/img/descarga.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'VIDAinfo',
+    'logo_img_alt' => 'MedicaInfo',
 
     /*
     |--------------------------------------------------------------------------
@@ -102,11 +102,11 @@ return [
     |
     */
 
-    'classes_auth_card' => 'card-outline card-success',
+    'classes_auth_card' => 'card-outline card-primary',
     'classes_auth_header' => '',
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
-    'classes_auth_icon' => '',  
+    'classes_auth_icon' => '',
     'classes_auth_btn' => 'btn btn-success',
 
     /*
@@ -122,14 +122,14 @@ return [
     */
 
     'classes_body' => '',
-    'classes_brand' => 'bg-white',
+    'classes_brand' => 'bg-blue',
     'classes_brand_text' => '',
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-light-teal elevation-4',
+    'classes_sidebar' => 'sidebar-light-blue elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-teal navbar-light',
+    'classes_topnav' => 'navbar-blue navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -174,7 +174,7 @@ return [
     'right_sidebar_push' => true,
     'right_sidebar_scrollbar_theme' => 'os-theme-light',
     'right_sidebar_scrollbar_auto_hide' => 'l',
-    
+
 
     /*
     |--------------------------------------------------------------------------
@@ -230,7 +230,7 @@ return [
         // Sidebar items:
         [
             'icon'      => 'fa fa-cog',
-            'topnav_right' => true, 
+            'topnav_right' => true,
             'url' => '#',
         ],
         [
@@ -238,53 +238,17 @@ return [
             'route'  => 'home.index',
             'icon'   => 'fa fa-home',
         ],
-        /*[
-            'text'        => 'AGENDA',
-            'url'         => 'schedule',
-            'icon'        => 'fa fa-calendar-alt'
-        ],*/
-        [
-            'text'        => ' PACIENTES',
-            'url'         => 'patients',
-            'icon'        => 'fa fa-user'
-        ],
         [
             'text' => ' MEDICAMENTOS',
             'icon' => 'fas fa-prescription-bottle-alt',
             'url'  => 'products',
-            
+
         ],
         [
             'text' => ' PADECIMIENTOS',
             'url'  => 'ailments',
             'icon' => 'fas fa-bacterium',
         ],
-        /*[
-            'header'    => 'DOCUMENTOS EN BLANCO'
-        ],
-        [
-            'text' => ' CARTA MEMBRETADA',
-            'route'  => 'documents.letterhead.index',
-            'icon' => 'fas fa-file',
-        ],
-        [
-            'text' => ' RECETA',
-            'url'  => '#',
-            'icon' => 'fas fa-file-prescription',
-        ],
-        [
-            'header'    => 'CONFIGURACIÓN'
-        ],
-        [
-            'text' => ' AJUSTES',
-            'url'  => '#',
-            'icon' => 'fas fa-cog',
-        ],
-        [
-            'text' => ' INFORMACIÓN DE VERSION',
-            'url'  => '#',
-            'icon' => 'fas fa-code-branch',
-        ],*/
     ],
 
     /*

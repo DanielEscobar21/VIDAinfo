@@ -20,31 +20,23 @@
                         <div class="col-md-auto">
                             <a class="btn btn-light" href="{{route('products.edit', $product)}}"><i class="fas fa-edit"></i>Modificar Información</a>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <label class="form-label">Nombre del Producto: </label>
+                            <label class="form-label">Nombre del Medicamento: </label>
                             <h5>{{$product->name_product}}</h5>
                         </div>
                         <div class="col">
-                            <label class="form-label">Laboratorio: </label>
-                            <h5>{{$product->compania}}</h5>
-                        </div>
-                        <div class="col">
-                            <label class="form-label">Departamento: </label>
-                            <h5>{{$product->department}}</h5>
-                        </div>
-                        <div class="col">
-                            <label class="form-label">Tipo de Producto: </label>
+                            <label class="form-label">Tipo de Medicamento: </label>
                             <h5>
                                 @switch($product->presentation_product)
                                 @case('Extractos')
                                 <i class="fas fa-prescription-bottle"></i>
                                     @break
                                 @case('Plantas en frasco')
-                                <i class="fas fa-seedling"></i>   
+                                <i class="fas fa-seedling"></i>
                                     @break
                                 @case('Tabletas')
                                 <i class="fas fa-tablets"></i>
@@ -79,16 +71,16 @@
                                 @case('Aceites Esenciales' || 'Aceites')
                                 <i class="fas fa-wine-bottle"></i>
                                     @break
-                                @default                                       
+                                @default
                                 @endswitch
-                                {{' '.$product->presentation_product}} 
+                                {{' '.$product->presentation_product}}
                             </h5>
                         </div>
-                        
+
                     </div><br>
                     <div class="row">
                         <div class="col">
-                            <label class="form-label">Contenido del Producto: </label>
+                            <label class="form-label">Contenido del Medicamento: </label>
                             <h5>{{$product->content_product}}</h5>
                         </div>
                         <div class="col">
@@ -96,7 +88,7 @@
                             <h5>{{$product->dose_product}}</h5>
                         </div>
                         <div class="col">
-                            <label class="form-label">Padeciminetos para los que sirve: </label>                            
+                            <label class="form-label">Padeciminetos para los que sirve: </label>
                             @foreach ($product->ailments as $ailment)
                             <h5>{{$ailment->name_ailment}}</h5>
                             @endforeach

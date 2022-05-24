@@ -11,21 +11,21 @@
 <div class="container">
 <div class="card">
     <div class="card-header">
-        <h1>Bienvenido a VIDAinfo v2.0</h1>
+        <h1>Bienvenido a MedicaInfo</h1>
     </div>
     <div class="card-body">
         <div class="container">
             <div class="row">
-                <div class="col-8">
+                <div class="col">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Ultimos Productos</h4>
+                            <h4>Ultimos Medicamentos</h4>
                         </div>
                         <div class="card-body">
                             <div class="container">
                                 <div class="row row-cols-2 row-cols-lg-2 g-2 g-lg-2">
-                                @foreach ($products as $product)                                    
-                                
+                                @foreach ($products as $product)
+
                                     <div class="card col" style="width: 18rem;">
                                         <div class="card-body">
                                          <h6 class="card-subtitle mb-2 text-muted">{{$product->department}}</h6>
@@ -36,7 +36,7 @@
                                                 <i class="fas fa-prescription-bottle"></i>
                                                     @break
                                                 @case('Plantas en frasco')
-                                                <i class="fas fa-seedling"></i>   
+                                                <i class="fas fa-seedling"></i>
                                                     @break
                                                 @case('Tabletas')
                                                 <i class="fas fa-tablets"></i>
@@ -71,49 +71,23 @@
                                                 @case('Aceites Esenciales' || 'Aceites')
                                                 <i class="fas fa-wine-bottle"></i>
                                                     @break
-                                                @default                                       
-                                                @endswitch         
+                                                @default
+                                                @endswitch
                                               {{$product->presentation_product}}
                                             </h6>
                                           <p class="card-text">{{$product->content_product}}</p>
                                           <a href="{{route('products.show', $product->id)}}" class="card-link">Ver Medicamento</a>
                                         </div>
-                                    </div>                            
-                                
+                                    </div>
+
                                 @endforeach
                             </div>
                            </div>
-                            
-                        </div>
-                    </div>  
-                </div>
-                <div class="col-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Ultimos Pacientes</h4>
-                        </div>
-                        <div class="card-body">
-                            <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Fecha</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($patients as $pat)
-                                      <tr>
-                                        <td>{{$pat->name_patient .' '.$pat->lastname_patient}}</td>
-                                        <td><?php
-                                        echo date_format($pat->created_at, 'd-M-Y');                                        
-                                        ?></td>
-                                      </tr>
-                                    @endforeach                                  
-                                </tbody>
-                              </table>
+
                         </div>
                     </div>
                 </div>
+
               </div>
         </div>
     </div>
